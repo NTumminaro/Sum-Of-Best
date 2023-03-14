@@ -39,9 +39,8 @@ Games.init(
   },
   {
     sequelize,
-    freezeTableName: true,
     underscored: true,
-    modelName: 'games',
+    timestamps: false
   }
 );
 
