@@ -35,13 +35,7 @@ Games.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gallery_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'gallery',
-        key: 'id',
-      },
-    },
+   
   },
   {
     sequelize,
