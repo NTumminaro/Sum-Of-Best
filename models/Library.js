@@ -1,26 +1,18 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Homepage extends Model {}
+class Library extends Model {}
 
-Homepage.init(
+Library.init(
   {
-    id: {
+    libraryid: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    gamename: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    starting_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    ending_date: {
-      type: DataTypes.DATE,
       allowNull: false,
     },
   },
@@ -28,8 +20,8 @@ Homepage.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'homepage',
+    modelName: 'library',
   }
 );
 
-module.exports = Homepage;
+module.exports = Library;

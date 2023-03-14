@@ -10,17 +10,17 @@ class User extends Model {
 
 User.init(
   {
-    userID: {
+    userid: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    userName: {
+    screen_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
+    user_password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
