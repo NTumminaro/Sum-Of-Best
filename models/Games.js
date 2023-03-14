@@ -5,25 +5,33 @@ class Games extends Model {}
 
 Games.init(
   {
-    gameID: {
+    gameid: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    gameTitle: {
+    game_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gameReleaseDate: {
+    release_year: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    gameImageURL: {
+    console_type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    gameNotes: {
+    image_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    discord_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    notes: {
       type: DataTypes.STRING,
       allowNull: false,
     },
