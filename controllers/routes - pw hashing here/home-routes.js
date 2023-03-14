@@ -26,35 +26,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET game individual page
-router.get('/games/:id', async (req, res) => {
-  try {
-    const dbGamesData = await Games.findByPk(req.params.id, {
-      include: [
-        {
-          model: Games,
-          attributes: [
-            'gameid',
-            'game_name',
-            'release_year',
-            'console_type',
-            'image_url',
-            'discord_url',
-            'notes',
-          ],
-        },
-      ],
-    });
-
-    const games = dbGamesData.get({ plain: true });
-    res.render('games', { games, loggedIn: req.session.loggedIn });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-// GET one game
+// GET individual game
 router.get('/games/:id', async (req, res) => {
   try {
     const dbGamesData = await Games.findByPk(req.params.id);
