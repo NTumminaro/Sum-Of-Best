@@ -3,7 +3,7 @@ const exphbs = require('express-handlebars');
 const { Gallery, Painting } = require('./models');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3306;
 
 // Set up Handlebars view engine
 app.engine('handlebars', exphbs());
