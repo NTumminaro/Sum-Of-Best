@@ -27,6 +27,8 @@ app.get('/', async (req, res) => {
   }
 });
 
+// gallery route
+
 app.get('/gallery/:id', async (req, res) => {
   try {
     const gallery = await Gallery.findByPk(req.params.id, {
