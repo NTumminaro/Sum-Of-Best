@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "build": "rm -rf dist && node-sass sass/mystyles.scss public/css/mystyles.css && cp -r public dist",
+    "start": "npm run build && node server.js",
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
@@ -20,6 +21,7 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
+    "node-sass": "^8.0.0",
     "sequelize": "^6.3.5"
     
     
