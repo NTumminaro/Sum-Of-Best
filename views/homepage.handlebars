@@ -1,4 +1,8 @@
 {{!-- games needs to be passed into here, from routes --}}
-{{#each gamesList}}
-{{> game-cards}}
-{{/each}}
+<div class="columns is-multiline">
+    {{#each gamesList}}
+    <div class="column is-one-quarter">
+        {{> game-cards}}
+    </div>
+    {{/each}}
+</div>

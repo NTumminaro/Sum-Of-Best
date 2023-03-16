@@ -1,12 +1,15 @@
 <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src={{image_url}} alt="Game Box Art">
-    </figure>
-  </div>
-  <div class="card-content">
-      <div class="media-content">
-        <p class="title is-4">{{game_name}}</p>
-        <p class="subtitle is-6">{{release_year}}</p>
+  <a href="/games/{{gameid}}" >
+    <div class="card-image">
+      <figure class="image is-132x176">
+        <img src={{image_url}} alt="Game Box Art">
+      </figure>
     </div>
+    <div class="card-content">
+        <div class="media-content is-132x132">
+          <p class="title is-4">{{game_name}}</p>
+          <p class="subtitle is-6">{{release_year}}</p>
+        </div>
+    </div>
+  </a>
 </div>

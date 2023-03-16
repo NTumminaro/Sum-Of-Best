@@ -8,23 +8,44 @@
   <link rel="stylesheet" href="/css/mystyles.css">
 </head>
 
-<body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+<body class="has-background-grey">
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="margin-bottom: 20px;">
+
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item" href="/">
           <img src="/images/brand.png">
         </a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary" href="/">
+              <strong>Sign up</strong>
+            </a>
+            {{!-- add link to pull up login page / sign up page --}}
+            <a class="button is-light" href="/">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
     </nav>
   <main class="container container-fluid mt-5">
     {{{ body }}}
   </main>
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-      <strong><a href="https://github.com/NTumminaro/Sum-Of-Best">Github</a></strong>
-    </p>
-  </div>
-</footer>
+
+  <footer class="footer" style="margin-top: 20px;">
+    <div class="content has-text-centered">
+      <p>
+        <strong><a href="https://github.com/NTumminaro/Sum-Of-Best">Github</a></strong>
+      </p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
