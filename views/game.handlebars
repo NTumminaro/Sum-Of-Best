@@ -1,16 +1,16 @@
 {{!-- creates the details of games when logged in --}}
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <section class="game">
-  <img src={{image_url}} alt="Game Box Art">
+  <img src={{game.image_url}} alt="Game Box Art">
   <div class="game-details">
-    <h3>{{games.game_name}}</h3>
-    <p>By: {{games.screen_name}}</p>
-    <p>Game release year: {{games.release_year}}</p>
-    <p>Console: {{games.consonle_type}}</p>
-    <p>Discord Information: {{games.discord_url}}</p>
-    <p>Notes: {{games.notes}}</p>
+    <h3>{{game.game_name}}</h3>
+    <p>By: {{game.screen_name}}</p>
+    <p>Game release year: {{game.release_year}}</p>
+    <p>Console: {{game.consonle_type}}</p>
+    <p>Discord Information: {{game.discord_url}}</p>
+    <p>Notes: {{game.notes}}</p>
   </div>
 </section>
-{{else}}
+{{!-- {{else}}
 <a href="/login">You must login first to view this page</a>
-{{/if}}
+{{/if}} --}}
