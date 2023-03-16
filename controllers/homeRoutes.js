@@ -29,7 +29,7 @@ router.get('/games/:gameid', async (req, res) => {
     }
     
     const game = dbGamesData.get({ plain: true });
-    res.render('games', { game, loggedIn: req.session.loggedIn });
+    res.render('game', { game, loggedIn: req.session.loggedIn });
 
   } catch (err) {
     console.error(err);
