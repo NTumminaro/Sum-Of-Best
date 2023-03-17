@@ -8,8 +8,7 @@ router.post('/', async (req, res) => {
     const dbUserData = await User.create({
       screen_name: req.body.username,
       user_password: req.body.password,
-    },
-    );
+    });
     req.session.save(() => {
       req.session.loggedIn = true;
       res.redirect('/');
@@ -48,6 +47,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
+      req.session.userId = dbUserData.userid;
       console.log(
         '🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
         req.session.cookie

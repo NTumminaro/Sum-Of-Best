@@ -1,7 +1,11 @@
 @charset "utf-8";
 
+$lighter-grey: hsl(0, 0%, 21%);
+
 $navbar-item-img-max-height: 3rem;
 $footer-padding: 1rem;
+$footer-background-color: $lighter-grey;
+$is-fullheight: 85vh;
 
 @import "../node_modules/bulma/sass/base/_all.sass";
 @import "../node_modules/bulma/sass/components/card.sass";
@@ -15,3 +19,6 @@ $footer-padding: 1rem;
 @import "../node_modules/bulma/sass/utilities/extends.sass";
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "../node_modules/bulma/sass/helpers/color.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+@import "../node_modules/bulma/bulma.sass";
