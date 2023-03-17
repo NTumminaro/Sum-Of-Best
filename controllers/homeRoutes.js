@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', {
       gamesList,
-      // loggedIn: req.session.loggedIn,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     console.log(err);
@@ -38,7 +38,7 @@ router.get('/games/:gameid', async (req, res) => {
 });
 
 // Login route
-router.get('/login', (req, res) => {
+router.get('/signup/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
