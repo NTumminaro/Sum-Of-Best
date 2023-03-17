@@ -27,6 +27,13 @@ run "npm i && start" in the terminal
 
 ## Usage
 
+Link to deployed application:
+
+## Technologies Used
+
+Express, Node.js, Handlebars, MySql DB, Sequelize ORM, Bulma
+
+
 ## Screenshots
 
 ![login-screenshot](assets/images/login-screenshot.png)
