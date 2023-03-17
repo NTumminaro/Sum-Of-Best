@@ -1,5 +1,5 @@
 {{!-- creates the details of games when logged in --}}
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <section class="game">
   <img src={{game.image_url}} alt="Game Box Art">
   <div class="game-details">
@@ -11,6 +11,6 @@
     <p>Notes: {{game.notes}}</p>
   </div>
 </section>
-{{!-- {{else}}
-<a href="/login">You must login first to view this page</a>
-{{/if}} --}}
+{{else}}
+  <a href="/signup/login">You must login first to view this page</a>
+{{/if}}
