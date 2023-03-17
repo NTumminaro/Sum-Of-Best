@@ -1,4 +1,4 @@
-# Sum of Best
+# ![Logo](public/images/brand.png)Sum of Best
 
 ## Description
 
@@ -17,8 +17,9 @@ An application for the speed-running community to compare times and notes.
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [Credits](#credits)
-- [License](#license)
+
 
 ## Installation
 
@@ -26,13 +27,13 @@ run "npm i && start" in the terminal
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+## Screenshots
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![login-screenshot](assets/images/login-screenshot.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![homepage-screenshot](assets/images/main-screenshot.png)
+
+![game-screenshot](assets/images/game-screenshot.png)
 
 ## Credits
 
