@@ -1,5 +1,10 @@
 const User = require('./User');
 const Library = require('./Library');
 const Games = require('./Games');
+const Notes = require('./Notes');
 
-module.exports = { User, Library, Games };
+Notes.belongsTo(User, {foreignKey: 'userId'});
+
+User.hasMany(Notes, {foreignKey: 'userId'});
+
+module.exports = { User, Library, Games, Notes };

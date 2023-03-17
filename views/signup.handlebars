@@ -1,20 +1,25 @@
 <div class="container row">
             <div class="jumbotron col-sm-4 pull-center">
                 <form action="/signup" method="post">
-                    <div>
-                        <label>Username:</label>
-                        <input type="text" name="username"/>
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Username"/>
+                        </div>
                     </div>
-                    <div>
-                        <label>Email:</label>
-                        <input type="text" name="email"/>
-                    </div>    
-                    <div>
-                        <label>Password:</label>
-                        <input type="password" name="password"/>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Email"/>
+                        </div>
                     </div>
-                    <div>
-                        <input class="btn btn-primary" type="submit" value="Sign Up"/>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                        <input class="input" type="password" placeholder="Password"/>
+                    </div>
+                    <div class="field">
+                        <button class="button is-success mt-3"/>Login</button>
                     </div>
                 </form>                  
             </div>          

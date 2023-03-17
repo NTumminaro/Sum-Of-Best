@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User , Games } = require('../models');
+const { User , Games, Notes } = require('../models');
 
 // GET all games for homepage
 router.get('/', async (req, res) => {
@@ -29,10 +29,36 @@ router.get('/games/:gameid', async (req, res) => {
     }
     
     const game = dbGamesData.get({ plain: true });
-    res.render('game', { game, loggedIn: req.session.loggedIn });
+    const notesData = await Notes.findAll(
+      {
+        where: {
+          gameId: req.params.gameid
+        },
+          include: User
+      }
+    );
+    const notesList = notesData.map((notes) =>
+      notes.get({ plain: true })
+    );
+
+    res.render('game', { game, notesList, loggedIn: req.session.loggedIn });
 
   } catch (err) {
     console.error(err);
+    res.status(500).json(err);
+  }
+});
+
+router.post('/games/:gameid', async (req, res) => {
+  try {
+    const dbNotesData = await Notes.create({
+      gameId: req.params.gameid,
+      userId: req.session.userId,
+      link: req.body.link
+    });
+    res.redirect(`/games/${req.params.gameid}`)
+  } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

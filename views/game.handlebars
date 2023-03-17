@@ -4,13 +4,37 @@
   <img src={{game.image_url}} alt="Game Box Art">
   <div class="game-details">
     <h3>{{game.game_name}}</h3>
-    <p>By: {{game.screen_name}}</p>
-    <p>Game release year: {{game.release_year}}</p>
+    <p>{{game.release_year}}</p>
     <p>Console: {{game.consonle_type}}</p>
-    <p>Discord Information: {{game.discord_url}}</p>
+    <p>Discord: {{game.discord_url}}</p>
     <p>Notes: {{game.notes}}</p>
+  </div>
+  <div>
+  {{!-- Table for notes with two sections, User and the link to their notes, requires probably a new model (or relationship in index i.e. belongs to) with a table linking a user and their notes (in link form) that they've submitted for the game --}}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Speedrun notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each notesList as |note|}}
+          <tr>
+            <td>{{note.user.screen_name}}</td>
+            <td><a href="{{note.link}}" target="_blank">{{note.link}}</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    <form action="/games/{{game.gameid}}" method="POST">
+      <input type="text" name="link"/>
+      <input class="button" type="submit" name="createnote" value="create note"/> 
+    </form>
+
   </div>
 </section>
 {{else}}
-  <a href="/signup/login">You must login first to view this page</a>
+<a href="/signup/login">You must login first to view this page</a>
 {{/if}}
