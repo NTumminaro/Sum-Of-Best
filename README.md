@@ -1,4 +1,4 @@
-# ![Logo](public/images/brand.png)Sum of Best
+# Sum of Best
 
 ## Description
 
@@ -52,10 +52,3 @@ Tony Steverson
 TonyWorldChanger
 
 
-
-## Features
-
-If your project has a lot of features, list them here.
-
-
-## Tests
