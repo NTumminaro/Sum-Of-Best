@@ -46,8 +46,8 @@ Express, Node.js, Handlebars, MySql DB, Sequelize ORM, Bulma
 
 Find us on Github!
 
--[NTumminaro](https://github.com/NTumminaro)
--[v-tommi](https://github.com/v-tommi)
--[lindstdb](https://github.com/lindstdb)
--[TonyWorldChanger](https://github.com/TonyWorldChanger)
+- [NTumminaro](https://github.com/NTumminaro)
+- [v-tommi](https://github.com/v-tommi)
+- [lindstdb](https://github.com/lindstdb)
+- [TonyWorldChanger](https://github.com/TonyWorldChanger)
 
