@@ -31,7 +31,7 @@ run "npm i && start" in the terminal
 
 ## Technologies Used
 
-Express, Node.js, Handlebars, MySql DB, Sequelize ORM, Bulma
+Express, Node.js, Handlebars, MySql DB, Sequelize ORM, Sass, and Bulma
 
 
 ## Screenshots
