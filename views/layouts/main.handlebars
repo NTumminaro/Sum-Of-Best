@@ -8,27 +8,27 @@
   <link rel="stylesheet" href="/css/mystyles.css">
 </head>
 
-<body class="has-background-grey">
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="margin-bottom: 20px;">
+<body>
+    <nav role="navigation" aria-label="main navigation">
 
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+      <div class="brand">
+        <a href="/">
           <img src="/images/brand.png">
         </a>
       </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
+      <div class="end">
+        <div class="item">
           <div class="buttons">
             {{#if loggedIn}}
             <form action="/signup/logout" method="post">
-              <input class="button is-primary" type="submit" name="Logout" value="Logout"/>
+              <input class="button" type="submit" name="Logout" value="Logout"/>
             </form>
             {{else}}
-            <a class="button is-primary" href="/signup">
+            <a class="button" href="/signup">
               <strong>Sign up</strong>
             </a>
-            <a class="button is-light" href="signup/login">
+            <a class="button is-light" href="/signup/login">
               Log in
             </a>
             {{/if}}
@@ -38,12 +38,12 @@
 
 
     </nav>
-  <main class="hero container container-fluid mt-5 is-fullheight">
+  <main>
     {{{ body }}}
   </main>
 
-  <footer class="footer mt-3">
-    <div class="content has-text-centered">
+  <footer>
+    <div>
       <p>
         <strong><a href="https://github.com/NTumminaro/Sum-Of-Best">Github</a></strong>
       </p>

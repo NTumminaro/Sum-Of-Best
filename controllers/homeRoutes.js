@@ -26,6 +26,7 @@ router.get('/games/:gameid', async (req, res) => {
     const dbGamesData = await Games.findByPk(req.params.gameid);
     if(!dbGamesData) {
       res.status(404).render('404');
+      return;
     }
     
     const game = dbGamesData.get({ plain: true });
@@ -34,9 +35,10 @@ router.get('/games/:gameid', async (req, res) => {
         where: {
           gameId: req.params.gameid
         },
-          include: User
+          include: [ {model: User} ]
       }
     );
+    console.log(notesData)
     const notesList = notesData.map((notes) =>
       notes.get({ plain: true })
     );
@@ -45,7 +47,7 @@ router.get('/games/:gameid', async (req, res) => {
 
   } catch (err) {
     console.error(err);
-    res.status(500).json(err);
+    res.status(404).render('404');
   }
 });
 
@@ -59,7 +61,7 @@ router.post('/games/:gameid', async (req, res) => {
     res.redirect(`/games/${req.params.gameid}`)
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).render('404');
   }
 });
 
@@ -79,6 +81,10 @@ router.get('/signup', (req, res) => {
     return;
   }
   res.render('signup');
+});
+
+router.get('*', function(req, res){
+  res.render('404');
 });
 
 module.exports = router;

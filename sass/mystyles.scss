@@ -1,5 +1,69 @@
 @charset "utf-8";
 
+.game {
+    @extend .columns;
+    @extend .is-multiline;
+}
+
+.game-rows {
+    @extend .column;
+    @extend .is-one-fifth;
+}
+
+nav {
+    @extend .navbar;
+    @extend .is-dark;
+    @extend .mb-2;
+    .brand {
+        @extend .navbar-brand;
+        a {
+            @extend .navbar-item;
+        }
+    }
+    .end {
+        @extend .navbar-end;
+        .item {
+            @extend .navbar-item;
+            .button {
+                @extend .is-primary;
+            }
+        }
+
+    }
+}
+
+main {
+    @extend .container;
+    @extend .is-fluid;
+    @extend .mt-5;
+    @extend .hero;
+    @extend .is-fullheight-with-navbar;
+}
+
+body {
+    @extend .is-fullheight;
+    @extend .has-background-grey;
+}
+
+footer {
+    @extend .footer;
+    @extend .mt-3;
+    div {
+        @extend .content;
+        @extend .has-text-centered;
+    }
+}
+
+.signup {
+    @extend .columns;
+    @extend .is-centered;
+    form {
+        @extend .column;
+        @extend .is-one-third;
+        @extend .is-centered;
+    }
+}
+
 $lighter-grey: hsl(0, 0%, 21%);
 
 $navbar-item-img-max-height: 3rem;
@@ -14,11 +78,13 @@ $is-fullheight: 85vh;
 @import "../node_modules/bulma/sass/elements/button.sass";
 @import "../node_modules/bulma/sass/elements/container.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/table.sass";
+@import "../node_modules/bulma/sass/elements/box.sass";
 @import "../node_modules/bulma/sass/layout/footer.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/grid/columns.sass";
 @import "../node_modules/bulma/sass/utilities/extends.sass";
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
-@import "../node_modules/bulma/sass/helpers/color.sass";
 @import "../node_modules/bulma/sass/form/_all.sass";
 @import "../node_modules/bulma/sass/helpers/_all.sass";
-@import "../node_modules/bulma/bulma.sass";
