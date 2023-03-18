@@ -36,9 +36,9 @@ Express, Node.js, Handlebars, MySql DB, Sequelize ORM, Bulma
 
 ## Screenshots
 
-![login-screenshot](assets/images/login-screenshot.png)
-
 ![homepage-screenshot](assets/images/main-screenshot.png)
+
+![login-screenshot](assets/images/login-screenshot.png)
 
 ![game-screenshot](assets/images/game-screenshot.png)
 
