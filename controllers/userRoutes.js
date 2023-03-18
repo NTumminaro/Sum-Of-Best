@@ -3,20 +3,28 @@ const { User } = require('../models');
 
 // CREATE new user
 router.post('/', async (req, res) => {
-  console.log("made it")
   try {
-    const dbUserData = await User.create({
-      screen_name: req.body.username,
-      user_password: req.body.password,
-    });
-    req.session.save(() => {
-      req.session.loggedIn = true;
-      res.redirect('/');
+    if (req.body.password == req.body.confirm) {
+      const dbUserData = await User.create({
+        screen_name: req.body.username,
+        user_password: req.body.password
+        });
+      req.session.save(() => {
+        req.session.loggedIn = true;
+        res.redirect('/');
+        }); 
+    } else {
+      res.render('signup', {pwConfirmFail: true});
+    };
 
-    });
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+    if (err.name == "SequelizeUniqueConstraintError") {
+      console.log(err);
+      res.status(500).render('signup', {nameCheckFail: true });
+    } else {
+      console.log(err);
+      res.status(500).render('signup', {pwCheckFail: true });
+    }
   }
 });
 
@@ -32,16 +40,15 @@ router.post('/login', async (req, res) => {
     if (!dbUserData) {
       res
         .status(400)
-        .json({ message: 'Incorrect username or password. Please try again!' });
+        .render('login', {pwCheckFail: true});
       return;
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
-    // change to return an error login page ///////////////////////////
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect username or password. Please try again!' });
+        .render('login', {pwCheckFail: true});
       return;
     }
 
@@ -57,7 +64,7 @@ router.post('/login', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).redirect('/');
   }
 });
 

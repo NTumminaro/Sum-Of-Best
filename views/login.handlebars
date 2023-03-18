@@ -1,17 +1,25 @@
-<div class="container row">
-            <div class="jumbotron col-sm-4 pull-center">
-                <form action="/signup/login" method="post">
-                    <div>
-                        <label>Username:</label>
-                        <input type="text" name="username"/>
-                    </div>
-                    <div>
-                        <label>Password:</label>
-                        <input type="password" name="password"/>
-                    </div>
-                    <div>
-                        <input class="btn btn-primary" type="submit" value="Log In"/>
-                    </div>
-                </form>                  
-            </div>          
+<div class="signup">
+    <form action="/signup/login" method="post">
+        {{#if pwCheckFail}}
+        <div class="field">
+            <label class="label has-text-warning">Username or password incorrect!
+        </label>
         </div>
+        {{/if}}
+        <div class="field">
+            <label class="label">Username</label>
+            <div class="control">
+                <input class="input" type="text" name="username" placeholder="Username"/>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+                <input class="input" type="password" name="password" placeholder="Password"/>
+            </div>
+        </div>
+        <div class="field">
+            <button class="button is-success mt-3"/>Log in</button>
+        </div>
+    </form>                  
+</div>          

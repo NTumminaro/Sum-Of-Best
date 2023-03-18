@@ -1,8 +1,10 @@
 {{!-- games needs to be passed into here, from routes --}}
-<div class="columns is-multiline">
+<div class="game">
     {{#each gamesList}}
-    <div class="column is-one-quarter">
+    <div class="game-rows">
         {{> game-cards}}
     </div>
     {{/each}}
 </div>
+
+{{print_object game}}

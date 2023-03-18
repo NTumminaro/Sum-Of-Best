@@ -27,7 +27,7 @@ Notes.init(
         type: DataTypes.INTEGER,
         unique: false,
         references: {
-          model: 'user',
+          model: 'users',
           key: 'userid'
         }
       },

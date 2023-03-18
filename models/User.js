@@ -19,6 +19,7 @@ User.init(
     screen_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
     user_password: {
       type: DataTypes.STRING,
