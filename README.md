@@ -27,7 +27,7 @@ run "npm i && start" in the terminal
 
 ## Usage
 
-Link to deployed application:
+Link to deployed application: https://sum-of-best.herokuapp.com/
 
 ## Technologies Used
 
