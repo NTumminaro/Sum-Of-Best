@@ -11,6 +11,7 @@ router.post('/', async (req, res) => {
         });
       req.session.save(() => {
         req.session.loggedIn = true;
+        req.session.userId = dbUserData.userid;
         res.redirect('/');
         }); 
     } else {
